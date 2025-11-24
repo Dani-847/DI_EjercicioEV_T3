@@ -70,7 +70,7 @@ public class MainController implements Initializable {
         configurarTabla();
         configurarEventos();
         inicializarCamposFijos();
-        configurarTabla();
+        configurarClickTabla();
     }
 
     private void configurarComboPlataforma() {
