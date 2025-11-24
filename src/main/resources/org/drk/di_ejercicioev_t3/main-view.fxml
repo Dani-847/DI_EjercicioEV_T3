@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.drk.di_ejercicioev_t3.controllers.MainController">
+
+    <top>
+        <Label text="Gestor de usuarios" BorderPane.alignment="TOP_LEFT">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+    </top>
+
+    <center>
+        <BorderPane BorderPane.alignment="TOP_CENTER">
+            <top>
+                <TableView fx:id="tabla" prefHeight="232.0" prefWidth="586.0">
+                    <columns>
+                        <TableColumn fx:id="txtCorreo" prefWidth="251.0" text="Correo" />
+                        <TableColumn fx:id="txtPlataforma" prefWidth="102.0" text="Plataforma" />
+                        <TableColumn fx:id="txtAdministrador" prefWidth="60.0" text="Admin" />
+                        <TableColumn fx:id="txtVersion" prefWidth="57.0" text="Versión" />
+                        <TableColumn fx:id="txtFecha" prefWidth="115.0" text="Hora de creación" />
+                    </columns>
+                </TableView>
+            </top>
+
+            <bottom>
+                <AnchorPane prefHeight="30.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="5.0" layoutY="6.0" text="By Daniel Rodriguez Karczewska">
+                            <font>
+                                <Font name="System Italic" size="11.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </BorderPane>
+    </center>
+
+    <right>
+        <FlowPane hgap="0" prefHeight="200.0" prefWidth="260.0" style="-fx-padding: 0 20 0 20; -fx-alignment: TOP_CENTER;" vgap="5" BorderPane.alignment="TOP_CENTER">
+            <children>
+                <GridPane prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #cccccc; -fx-border-width: 1;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Añadir usuario" GridPane.rowIndex="0" />
+
+                        <TextField fx:id="cCorreo" promptText="Correo" GridPane.rowIndex="1" />
+
+                        <ComboBox fx:id="cPlataforma" prefHeight="25.0" prefWidth="208.0" promptText="Selecciona una plataforma" GridPane.rowIndex="2" />
+
+                        <CheckBox fx:id="cAdministrador" mnemonicParsing="false" text="Administrador" GridPane.rowIndex="3" />
+
+                        <TextField fx:id="cVersion" editable="false" promptText="Versión" GridPane.rowIndex="4" />
+
+                        <TextField fx:id="cFecha" editable="false" promptText="Fecha creación" GridPane.rowIndex="5" />
+
+                        <Button fx:id="btnAñadir" mnemonicParsing="false" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 6 18; -fx-font-weight: bold;" text="Añadir" GridPane.rowIndex="6" />
+                    </children>
+                </GridPane>
+
+                <Label fx:id="txtLog" prefWidth="240.0" style="-fx-text-fill: #666666; -fx-font-size: 11;" text="" />
+            </children>
+        </FlowPane>
+    </right>
+
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</BorderPane>
